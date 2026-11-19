@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout('Categorías', ~{::section})}">
+
+<body>
+
+<section>
+
+    <div class="encabezado-categorias">
+        <h1>Administración de categorías</h1>
+        <p>Consulta y administración de las categorías de perfumes.</p>
+    </div>
+
+    <button id="btnNuevaCategoria">
+        + Nueva categoría
+    </button>
+
+    <!-- TABLA -->
+    <div class="tabla-contenedor">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaCategorias">
+                <tr>
+                    <td colspan="4">Cargando categorías...</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="modalCategoria" class="modal oculto">
+
+        <div class="modal-contenido">
+
+            <h2 id="tituloModal">Registrar categoría</h2>
+
+            <form id="formCategoria">
+
+                <input type="hidden" id="idCategoria">
+
+                <div class="campo">
+                    <label for="nombreCategoria">Nombre</label>
+                    <input
+                        type="text"
+                        id="nombreCategoria"
+                        placeholder="Ej. Mujer"
+                        maxlength="100"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="descripcionCategoria">Descripción</label>
+                    <input
+                        type="text"
+                        id="descripcionCategoria"
+                        placeholder="Ej. Perfumes para damas"
+                        maxlength="255">
+                </div>
+
+                <div class="acciones">
+
+                    <button type="submit" id="btnGuardarCategoria">
+                        Guardar categoría
+                    </button>
+
+                    <button type="button"
+                            id="btnCancelarCategoria"
+                            class="btn-cancelar">
+                        Cancelar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="/js/categorias.js"></script>
+
+</section>
+
+</body>
+</html>

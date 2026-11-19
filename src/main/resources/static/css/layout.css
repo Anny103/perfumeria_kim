@@ -1,0 +1,107 @@
+
+/* LAYOUT GENERAL - PERFUMERÍA KIM */
+
+:root {
+    --principal: #42263a;
+    --secundario: #8b4775;
+    --fondo: #f7f4f6;
+    --texto: #292329;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+}
+
+/* ENCABEZADO */
+
+header {
+    background: var(--principal);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 8px 0 12px;
+}
+
+header p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* DECORACIÓN SUPERIOR */
+
+.decoracion {
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: #f3d6e8;
+}
+
+/* NAVEGACIÓN */
+
+.nav-principal {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 14px;
+    background: #fff;
+    border-bottom: 1px solid #e7e1e5;
+}
+
+.nav-principal a {
+    color: var(--principal);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+
+.nav-principal a:hover,
+.nav-principal a.activo {
+    background: #f1e7ed;
+}
+
+/* CONTENIDO */
+
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px #00000012;
+    min-height: 350px;
+}
+
+/* PIE DE PÁGINA */
+
+.footer-principal {
+    text-align: center;
+    padding: 25px;
+    color: #6f5b68;
+    font-size: 14px;
+}
+
+/* PANTALLAS PEQUEÑAS */
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    .contenedor-principal {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    .nav-principal a {
+        padding: 8px 12px;
+    }
+}

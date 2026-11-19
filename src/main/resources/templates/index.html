@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout('Inicio', ~{::section})}">
+
+<head>
+    <title>Inicio</title>
+</head>
+
+<body>
+
+    <section>
+
+        <div class="bienvenida">
+
+        <h1>Bienvenido a Perfumería KV</h1>
+
+        <p>
+            Sistema de gestión y administración de inventario
+            de perfumes.
+        </p>
+
+        <div class="panel-inicio">
+
+            <h2>Administración del sistema</h2>
+
+            <p>Seleccioná el módulo que deseas consultar.</p>
+
+            <div class="opciones-inicio">
+
+                <a href="/perfumes" class="tarjeta-opcion">
+                    <h3>Perfumes</h3>
+                    <p>Consultar y administrar el inventario.</p>
+                </a>
+
+                <a href="/categorias" class="tarjeta-opcion">
+                    <h3>Categorías</h3>
+                    <p>Administrar las categorías de perfumes.</p>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

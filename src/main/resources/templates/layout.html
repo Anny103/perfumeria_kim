@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(titulo, contenido)">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title th:text="${titulo} + ' | Perfumería KV'">
+        Perfumería KV
+    </title>
+
+    <!-- Estilos generales -->
+    <link rel="stylesheet" th:href="@{/css/layout.css}">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <div class="decoracion">
+            . ݁⋆ ۶ৎ ݁˖ . ݁
+        </div>
+
+        <h1>Perfumería KV</h1>
+
+        <p>Sistema de Gestión de Perfumes</p>
+
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="nav-principal">
+
+        <a th:href="@{/}">Inicio</a>
+
+        <a th:href="@{/perfumes}">Perfumes</a>
+
+        <a th:href="@{/categorias}">Categorías</a>
+
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor-principal">
+
+        <div th:replace="${contenido}">
+            Contenido de la página
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer-principal">
+
+        <p>© 2026 Perfumería KV - Sistema de Gestión</p>
+
+    </footer>
+
+</body>
+</html>
